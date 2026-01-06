@@ -1,11 +1,9 @@
 # WAF Tutorial Part 2: Neural Networks
 
 ## Introduction 
-This repository is the code associated with the [WAF](https://journals.ametsoc.org/view/journals/wefo/wefo-overview.xml) manuscript titled: "A Machine Learning Tutorial for Operational Meteorology, Part II: Neural Networks" written by Chase, R. J., Harrison, D. R., Lackmann, G. and McGovern, A. *in prep*. While the paper undergoes review, feel free to read its [preprint](https://arxiv.org/abs/2211.00147) and provide any comments via email to the corresponding author. If you have any issues with the code (bugs or other questions) please leave an [issue](https://github.com/ai2es/WAF_ML_Tutorial_Part2/issues) associated with this repo.
+This repository is the code associated with the [WAF](https://journals.ametsoc.org/view/journals/wefo/wefo-overview.xml) manuscript titled: "A Machine Learning Tutorial for Operational Meteorology, Part II: Neural Networks" written by Chase, R. J., Harrison, D. R., Lackmann, G. and McGovern, A. *in prep*. While the paper undergoes review, feel free to read its [preprint](https://arxiv.org/abs/2211.00147) and provide any comments via email to the corresponding author. The SSEC-hosted branch of this repository has been edited for use in a 2026 AI/ML short course, and any problems encountered here are not the responsibility of the original creators with AI2ES. If you have any issues with the code (bugs or other questions) please leave an [issue](https://github.com/ssec/WAF_ML_Tutorial_Part2/issues) associated with this repo.
 
 This second paper and repo (of two) that covers *neural networks* and *deep learning* methods (if you don't know what these phrases even mean thats OK! Check out Section 2 in the paper). If you dont know what machine learning is, please check out paper one in this series found [here](https://journals.ametsoc.org/view/journals/wefo/37/8/WAF-D-22-0070.1.xml).
-
-Please note, there are 2 missing notebooks at this time (Dec 2022), these will come sometime in the new year.
 
 ## Motivation
 
@@ -44,48 +42,3 @@ There are two main ways to interact with the code here.
 
    Google colab is awesome for those who do not know how to install python, or just dont have the RAM/HDD locally to do things. You can think of it this way. This notebook is just providing the instructions (i.e., code) to do what you want it to. Meanwhile the data and physical computer are on some Google machine somewhere, which will execute the code in the notebook. By default this google owned machine will have 12 GB of RAM and about 100 GB of HDD (i.e. storage). 
    
-## Install python on your local machine and run notebooks there
-
-   This is a bit more intense, especially for people who have never installed python on their machine. This method does allow you to always have the right packages installed and would enable you to actually download all of the SEVIR dataset if you want it (although it is very big... 924G total). 
-
-   1. Setup a Python installation on the machine you are using. I
-   recommend installing [Miniconda](https://docs.conda.io/en/latest/miniconda.html) since
-   it requires less storage than the full Anaconda Python distribution. Follow
-   the instructions on the miniconda page to download and install Miniconda
-   for your operating system. It is best to do these steps in a terminal (Mac/Linux) or powershell (Windows)
-
-      Once you get it setup, it would be good to have python and jupyter in this base environment.
-
-      ``` $ conda install -c conda-forge python jupyterlab ``` 
-
-   2. Now that conda is installed, clone this repository to your local machine with the command:
-
-      ``` $ git clone https://github.com/ai2es/WAF_ML_Tutorial_Part2.git ``` 
-
-      If you dont have git, you can install git ([Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)) or choose the "Download Zip" option, unzip it and then continue with these steps. 
-
-   3. Change into the newly downloaded directory 
-
-      ``` $ cd WAF_ML_Tutroial_Part2.git ``` 
-
-   4. It is good practice to always make a new env for each project you work on. So here we will make a new environment  
-
-      ``` $ conda env create -f environment.yml ``` 
-
-   5. Activate the new environment 
-
-      ``` $ conda activate waf_tutorial_part2 ``` 
-
-   6. Add this new environement to a kernel in jupyter 
-
-      ```$ python -m ipykernel install --user --name waf_tutorial_part2 --display-name "waf_tutorial_part2" ```
-
-   7. Go back to the base environment 
-
-      ```$ conda deactivate ``` 
-
-   8. Start jupyter
-
-      ``` $ jupyter lab ``` 
-
-   9. You should be able to open the notebooks with this repository and you should be able to add the kernel we just installed with the name *waf_tutorial_part2*. To change from the default kernel, click on the ```kernels``` tab and select ```Change Kernel...``` and select the ```waf_tutorial_part2``` kernel.  
